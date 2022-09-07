@@ -20,7 +20,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_sales")
-public class Selle {
+public class Sale {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +35,7 @@ public class Selle {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Selle selle = (Selle) o;
+        Sale selle = (Sale) o;
         return Objects.equals(id, selle.id);
     }
 
