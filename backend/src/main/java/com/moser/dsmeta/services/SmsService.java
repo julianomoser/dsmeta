@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -56,6 +57,6 @@ public class SmsService {
                 sale.getSellerName() +
                 " foi destaque em " +
                 date +
-                " com um total de R$ " + String.format("%.2f", sale.getAmount());
+                " com um total de R$ " + new DecimalFormat("#,##0.00").format(sale.getAmount());
     }
 }
